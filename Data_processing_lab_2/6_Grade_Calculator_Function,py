@@ -1,0 +1,30 @@
+
+def calculate_grade(marks):
+
+    average = sum(marks) / len(marks)
+
+    if average >= 80:
+        grade = "A"
+    elif average >= 70:
+        grade = "B"
+    elif average >= 60:
+        grade = "C"
+    elif average >= 50:
+        grade = "D"
+    else:
+        grade = "F"
+
+    return grade
+
+
+marks_array = []
+num_marks = int(input("How many marks do you want to enter? "))
+
+print("Enter the marks:")
+for i in range(num_marks):
+    mark = float(input("Enter mark " + str(i + 1) + ": "))
+    marks_array.append(mark)
+print("Marks entered:", marks_array)
+
+result = calculate_grade(marks_array)
+print("The grade is:", result)
